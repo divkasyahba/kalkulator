@@ -1,25 +1,60 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30804.86
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kalkulator", "kalkulator\kalkulator.csproj", "{3CA19590-4763-4732-8300-E49A57BA8A18}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3CA19590-4763-4732-8300-E49A57BA8A18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3CA19590-4763-4732-8300-E49A57BA8A18}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3CA19590-4763-4732-8300-E49A57BA8A18}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3CA19590-4763-4732-8300-E49A57BA8A18}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {ED34869C-4827-483F-BD4C-C8793DDE05D0}
-	EndGlobalSection
-EndGlobal
+using System;
+
+namespace kalkulator
+{
+    class Program
+    {
+        static void Main(string[] args)
+            
+        {
+            Console.Title = "aplikasi kalkulator";
+            Console.WriteLine("pilih menu kalkulator: ");
+            Console.WriteLine("\n");
+            Console.WriteLine("1. Penambahan");
+            Console.WriteLine("2. Pengurangan");
+            Console.WriteLine("3. Perkalian");
+            Console.WriteLine("4. Pembagian\n");
+            Console.WriteLine("Masukan pilihan: ");
+            int Pilihan = Convert.ToInt32(Console.ReadLine()); 
+
+            if (Pilihan == 1)
+                {
+                Console.WriteLine("Masukan angka pertama: ");
+                int a = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Masukan angka kedua: ");
+                int b = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Hasil penambahan anda: " +(a+b));
+            } else if (Pilihan == 2)
+                {
+                Console.WriteLine("Masukan angka pertama: ");
+                int a = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Masukan angka kedua: ");
+                int b = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Hasil pengurangan anda: " + (a - b));
+            } else if (Pilihan == 3)
+                {
+                Console.WriteLine("Masukan angka pertama: ");
+                int a = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Masukan angka kedua: ");
+                int b = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Hasil perkalian anda: " + (a * b));
+            } else if (Pilihan == 4)
+                {
+                Console.WriteLine("Masukan angka pertama: ");
+                int a = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Masukan angka kedua: ");
+                int b = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Hasil pembagian anda: " + (a / b));
+            } else
+                {
+                Console.WriteLine("Maaf, menu tidak tersedia");
+                }
+            Console.WriteLine("Tekan enter untuk keluar");
+
+            Console.ReadKey();
+            
+
+
+        }
+    }
+}
